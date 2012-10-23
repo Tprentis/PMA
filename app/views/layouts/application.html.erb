@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+ 
+ <div id="user_nav" style = "background-color: #fff; align: right;">
+  		<% if user_signed_in? %>
+    		Signed in as <b><font color="#D1A319"><%= current_user.email %></font></b>. Not you?
+    		<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  		<% else %>
+    		<%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+  		<% end %>
+  	
+  </div>	
+<head>
+  <title>PMA</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  
+  
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
