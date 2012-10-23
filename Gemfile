@@ -37,6 +37,6 @@ gem 'rb-fsevent', '~> 0.9.1'
 
 # Deploy with Capistrano
 gem 'capistrano'
-
+gem 'warbler'
 # To use debugger
 # gem 'debugger'
